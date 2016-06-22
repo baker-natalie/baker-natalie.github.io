@@ -1,0 +1,118 @@
+.container {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.quicksand {
+	font-family: 'Quicksand', sans-serif;
+}
+
+.sacramento {
+	font-family: 'Sacramento', sans-serif;
+}
+
+.header {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header-image {
+	float: left;
+	width: 50%;
+}
+
+.header-text {
+	float: right;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}
+
+.nav {
+	float: right;
+}
+
+.nav-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+li {
+	display: inline-block;
+}
+
+.bio {
+	height: 100%;
+	padding: 2em;
+	background: #EAECEE; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(white, #EAECEE); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(white, #EAECEE); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(white, #EAECEE); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(white, #EAECEE);
+    margin-top: 10px;
+}
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%
+}
+
+.profile-pic {
+	border-radius: 100%;
+	max-width: 300px;
+	padding: 40px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.project-text {
+	text-align: center;
+}
+
+.project-img {
+	width: 100%;
+	height: 100%;
+}
+
+.header-logo {
+	height: 200px;
+	max-width: 200px;
+	float: left;
+	padding: 10px;
+}
+
+.footer-logo {
+	height: 100px;
+	max-width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.jitb-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.copy {
+	width: 100%;
+	text-align: center
+}
+
+.funvector {
+	max-width: 450px;
+	vertical-align: middle;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+.project-info {
+	height: 100%;
+}
