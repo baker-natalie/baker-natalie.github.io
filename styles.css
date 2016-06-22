@@ -26,8 +26,8 @@
 .header-text {
 	float: right;
 	text-align: right;
-	margin: 0;
-	padding: 0;
+	margin-bottom: 0;
+	padding: 5px;
 }
 
 .nav {
@@ -48,11 +48,7 @@ li {
 .bio {
 	height: 100%;
 	padding: 2em;
-	background: #EAECEE; /* For browsers that do not support gradients */
-    background: -webkit-radial-gradient(white, #EAECEE); /* Safari 5.1 to 6.0 */
-    background: -o-radial-gradient(white, #EAECEE); /* For Opera 11.6 to 12.0 */
-    background: -moz-radial-gradient(white, #EAECEE); /* For Firefox 3.6 to 15 */
-    background: radial-gradient(white, #EAECEE);
+	background: #EAECEE;
     margin-top: 10px;
 }
 
@@ -63,9 +59,8 @@ li {
 }
 
 .profile-pic {
-	border-radius: 100%;
 	max-width: 300px;
-	padding: 40px;
+	padding-top: 40px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -105,14 +100,24 @@ li {
 }
 
 .funvector {
-	max-width: 450px;
-	vertical-align: middle;
+	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 }
 
-
+.jitb-img {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
 
 .project-info {
 	height: 100%;
+}
+
+.nav-list {
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	padding-top: 2em;
 }
