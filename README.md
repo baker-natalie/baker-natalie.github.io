@@ -1,3 +1,3 @@
 # baker-natalie.github.io
 
-This is my first CSS project for the Udacity Front End Developer Nanodegree.
+This is my portfolio project for the Udacity Front End Developer Nanodegree.
