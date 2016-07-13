@@ -189,7 +189,11 @@ span {
 }
 
 #icon {
-  background-color: #435;
+  background-color: #8c2;
+}
+
+#footerContacts {
+  background-color: #8c2
 }
 
 .project-image {
@@ -247,6 +251,7 @@ span {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  min-height: 500px;
 }
 
 #mapDiv,
