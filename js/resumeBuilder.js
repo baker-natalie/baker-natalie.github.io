@@ -79,7 +79,7 @@ var bio = {
 		"linkedin" : "natalie-baker",
 		"location" : "Houston, TX"
 	},
-	"welcomeMessage" : "Welcome to my resume page!",
+	"welcomeMessage" : "Welcome to my resume page! This is my first javaScript project- an online resume that can be easily customized to display my unique skills and talents. Take a look around and contact me if you'd like to know more about my work!",
 	"skills" : ["Awesomeness", "HTML", "CSS", "JavaScript", "jQuery"],
 	"biopic" : "images/profile-pic.jpg"
 }
@@ -108,18 +108,18 @@ var education = {
 var work = {
 	"jobs" : [
 		{
-			"employer" : "Self",
-			"title" : "Mom",
+			"employer" : "Self-Employed",
+			"title" : "Freelance Web Developer",
 			"location" : "Houston, TX",
-			"dates" : "01/2009 - present",
-			"description" : "Mom it all up"
+			"dates" : "05/2016 - present",
+			"description" : "I design, develop, and deploy beautiful, functional websites using HTML, CSS, and JavaScript."
 		},
 		{
 			"employer" : "Taco Mama",
 			"title" : "Lead Server/Caterer",
 			"location" : "Huntsville, AL",
 			"dates" : "10/2014 - 6/2015",
-			"description" : "sling tacos"
+			"description" : "I worked with the service and kitchen teams to deliver a delightful and delicious experience for every guest."
 		}
 	]
 }
@@ -129,14 +129,14 @@ var projects = {
 		{
 			"title" : "Portfolio Project",
 			"dates" : "6/2016",
-			"description" : "An online portfolio to showcase my front-end design work",
+			"description" : "An online portfolio to showcase my front-end design work. The final project for Intro to HTML and CSS in my Udacity nanodegree. This project required use of HTML, CSS, and a CSS framework- I used Bootstrap!",
 			"images" : ["images/portfolio-image.jpg"]
 		},
 		{
 			"title" : "Animal Trading Card",
 			"dates" : "6/2016",
-			"description" : "A collection of vector images",
-			"images" : ["animal-card-image.jpg"]
+			"description" : "My first CSS project. This project required the use of HTML and CSS to replicate and customize an animal trading card.",
+			"images" : ["images/animal-card-image.jpg"]
 		}
 	]
 }
@@ -182,10 +182,13 @@ projects.display = function() {
 		$(".project-entry:last"). append(HTMLprojectTitle.replace("%data%", projects.projects[i].title));
 		$(".project-entry:last"). append(HTMLprojectDates.replace("%data%", projects.projects[i].dates));
 		$(".project-entry:last"). append(HTMLprojectDescription.replace("%data%", projects.projects[i].description));
+		$(".project-entry:last"). append(HTMLprojectImage.replace("%data%", projects.projects[i].images));
 
-		for (var i = 0; i < projects.projects[i].images.length; i++){
-			$(".project-entry:last"). append(HTMLprojectImage.replace("%data%", projects.projects[i].images));
-		}
+//		if (projects.projects[i].images.length > 0) {
+//			for (var img = 0; i < projects.projects[i].images.length; img++){
+//				$(".project-entry:last"). append(HTMLprojectImage.replace("%data%", projects.projects[i].images[img]));
+//			}
+//		}
 	}
 }
 
@@ -199,6 +202,7 @@ education.displaySchools = function() {
 		$(".education-entry"). append(schoolNameDegree.replace("#", education.schools[i].url));
 		$(".education-entry"). append(HTMLschoolDates.replace("%data%", education.schools[i].dates));
 		$(".education-entry"). append(HTMLschoolLocation.replace("%data%", education.schools[i].location));
+		$(".education-entry:last"). append(HTMLschoolMajor.replace("%data%", education.schools[i].majors));
 	}
 }
 
