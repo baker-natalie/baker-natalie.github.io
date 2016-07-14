@@ -49,7 +49,7 @@ bio.display = function() {
 
 };
 
-$("#main").append(bio.display);
+bio.display();
 
 // projects object- project information
 var projects = {
@@ -82,7 +82,7 @@ projects.display = function() {
     }
 };
 
-$("#main").append(projects.display);
+projects.display();
 
 // education object- school and course information
 var education = {
@@ -102,8 +102,8 @@ var education = {
     }]
 };
 
-// function that displays college info from education object on the page
-education.displaySchools = function() {
+// function that displays college and online course info from education object on the page
+education.display = function() {
     $("#education").append(HTMLschoolStart);
     for (var i = 0; i < education.schools.length; i++) {
 
@@ -113,12 +113,7 @@ education.displaySchools = function() {
         $(".education-entry").append(HTMLschoolLocation.replace("%data%", education.schools[i].location));
         $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", education.schools[i].majors));
     }
-};
 
-$("#main").append(education.displaySchools);
-
-// function that displays online course information from education object on the page
-education.displayOnlineCourses = function() {
     $("#onlineClasses").append(HTMLclassesStart);
     for (var i = 0; i < education.onlineCourses.length; i++) {
         var classTitleSchool = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title) + HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
@@ -128,7 +123,7 @@ education.displayOnlineCourses = function() {
     }
 };
 
-$("#main").append(education.displayOnlineCourses);
+education.display();
 
 // work object- job information
 var work = {
@@ -169,7 +164,7 @@ work.display = function() {
     }
 };
 
-$("#main").append(work.display);
+work.display();
 
 // Interactive map and twitter feeds
 $("#mapDiv").append(googleMap);
