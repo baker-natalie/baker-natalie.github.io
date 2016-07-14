@@ -47,6 +47,23 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   -->
 <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDYZsuLyO47HYIdBY0FA7qschZb7WeCx6E"></script>
 
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
   <meta name="viewport" content="width=device-width">
   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Merriweather:300' rel='stylesheet' type='text/css'>
 </head>
