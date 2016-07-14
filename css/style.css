@@ -212,6 +212,11 @@ span {
   background-color: #333;
   color: #fff;
 }
+
+a:hover {
+  color: #fc0 !important;
+}
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
@@ -259,6 +264,11 @@ span {
   height: 400px;
   width: 50%;
   padding-bottom: 5%;
+}
+
+#twitter {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 @media only screen and (min-width: 750px) {
