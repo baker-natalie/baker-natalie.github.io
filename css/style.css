@@ -9,12 +9,12 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
-  margin:0;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  background-color: #fc0;
+    background-color: #fc0;
 }
 
 h1,
@@ -23,257 +23,259 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 li,
 p {
-  font-family: 'Merriweather', serif;
+    font-family: 'Merriweather', serif;
 }
 
 .container {
-  width: 100%;
-  max-width: 1000px;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: #435;
+    width: 100%;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #435;
 }
 
 .clear-fix {
-  overflow: auto;
+    overflow: auto;
 }
 
 .education-entry,
 .work-entry,
 .project-entry,
 .class-entry {
-  padding: 0 5%;
+    padding: 0 5%;
 }
 
 h1 {
-  font-size: 40px;
-  color: #435;
-  line-height: 48px;
-  display: inline;
+    font-size: 40px;
+    color: #435;
+    line-height: 48px;
+    display: inline;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #8c2;
-  line-height: 29px;
-  padding: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #8c2;
+    line-height: 29px;
+    padding: 10px;
 }
 
 h3 {
-  font-size: 20px;
-  color: #333;
-  line-height: 22px;
+    font-size: 20px;
+    color: #333;
+    line-height: 22px;
 }
 
 h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #435;
-  line-height: 17px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #435;
+    line-height: 17px;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
-
+    padding: 10px 5%;
 }
 
 .date-text {
-  font-size: 14px;
-  color: #333;
-  line-height: 16px;
-  float: left;
+    font-size: 14px;
+    color: #333;
+    line-height: 16px;
+    float: left;
 }
 
 .location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #333;
-  line-height: 16px;
-  float: right;
-
+    font-style: italic;
+    font-size: 14px;
+    color: #333;
+    line-height: 16px;
+    float: right;
 }
 
 p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
+    font-size: 14px;
+    color: #333;
+    line-height: 21px;
 }
 
 a {
-  color: #000;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
+    color: #000;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+}
+
+a:hover {
+    color: #fc0 !important;
 }
 
 #skills-h3 {
-  color: #fc0;
-  display: none;
+    color: #fc0;
+    display: none;
 }
 
 .orange {
-  background-color: #fc0;
+    background-color: #fc0;
 }
 
 .orange-text {
-  color: #fc0;
+    color: #fc0;
 }
 
 .white-text {
-  font-weight: bold;
-  color: #fff;
+    font-weight: bold;
+    color: #fff;
 }
 
 .gray {
-  background-color: #333;
-  padding-bottom: 25px;
+    background-color: #333;
+    padding-bottom: 25px;
 }
 
 .dark-gray {
-  background-color: #435;
+    background-color: #435;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #8c2;
+    background-color: #8c2;
 }
 
 #header-text {
-  background-color: #8c2;
-  color: #fff;
+    background-color: #8c2;
+    color: #fff;
 }
 
 .flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
 }
 
 .center-content {
-  padding: 2.5% 5%;
+    padding: 2.5% 5%;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
+    float: left;
+    padding: 10px;
+    width: 200px;
+    display: none;
 }
 
 img {
-  padding: 10px;
+    padding: 10px;
 }
 
 span {
-  padding: 5px;
+    padding: 5px;
 }
 
 #lets-connect {
-  text-align: center;
+    text-align: center;
 }
 
 #icon {
-  background-color: #8c2;
+    background-color: #8c2;
 }
 
 #footerContacts {
-  background-color: #8c2
+    background-color: #8c2;
 }
 
 .project-image {
-  max-width: 100%;
-  max-height: 400px;
-  margin-right: auto;
-  margin-left: auto;
+    max-width: 100%;
+    max-height: 400px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #project-image {
-  width: 100%;
-  background-color: #435;
+    width: 100%;
+    background-color: #435;
 }
 
 #content-text {
-  background-color: #333;
-  color: #fff;
-}
-
-a:hover {
-  color: #fc0 !important;
-}
-
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
-}
-
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-  #mapDiv,
-  #twitterDiv {
-    width : 100% !important;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
-}
-
-#map {
-  height: 100%;
-  margin: 0 5%;
+    background-color: #333;
+    color: #fff;
 }
 
 .interactive {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 500px;
 }
 
 #mapDiv,
 #twitterDiv {
-  height: 400px;
-  width: 50%;
-  padding-bottom: 5%;
+    height: 400px;
+    width: 50%;
+    padding-bottom: 5%;
+}
+
+#map {
+    height: 100%;
+    margin: 0 5%;
 }
 
 #twitter {
-  padding-left: 5%;
-  padding-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 1024px) {
+    #lets-connect {
+        margin-top: 5%;
+    };
+}
+
+@media only screen and (max-width:900px) {
+    .biopic {
+        width: 175px;
+    }
+
+    #mapDiv,
+  #twitterDiv {
+        width: 100% !important;
+    };
+}
+
+@media only screen and (max-width: 750px) {
+    #lets-connect {
+        margin-top: 10%;
+    }
+
+    .biopic {
+        width: 150px;
+    }
+
+    .welcome-message {
+        display: none;
+    };
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
+    #skills-h3,
   .biopic {
-    display: block;
-  }
+        display: block;
+    };
 }
