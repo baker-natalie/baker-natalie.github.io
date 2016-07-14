@@ -90,7 +90,7 @@ var education = {
 			"name" : "Auburn University",
 			"location" : "Auburn, AL",
 			"degree" : "N/A",
-			"majors" : ["Fine Arts", "Graphic Design"],
+			"majors" : ["Fine Arts", " Graphic Design"],
 			"dates" : "8/2004 - 5/2007",
 			"url" : "http://www.auburn.edu"
 		}
@@ -128,12 +128,14 @@ var projects = {
 	"projects" : [
 		{
 			"title" : "Portfolio Project",
+			"url" : "https://github.com/baker-natalie/udacity-coursework/tree/master/baker-natalie.github.io-master",
 			"dates" : "6/2016",
 			"description" : "An online portfolio to showcase my front-end design work. The final project for Intro to HTML and CSS in my Udacity nanodegree. This project required use of HTML, CSS, and a CSS framework- I used Bootstrap!",
 			"images" : ["images/portfolio-image.jpg"]
 		},
 		{
 			"title" : "Animal Trading Card",
+			"url" : "https://github.com/baker-natalie/udacity-coursework/tree/master/ANIMAL-TRADING-CARDS-NATALIE-BAKER",
 			"dates" : "6/2016",
 			"description" : "My first CSS project. This project required the use of HTML and CSS to replicate and customize an animal trading card.",
 			"images" : ["images/animal-card-image.jpg"]
@@ -179,7 +181,8 @@ projects.display = function() {
 	
 	for (var i = 0; i < projects.projects.length; i++) {
 		$("#projects"). append(HTMLprojectStart);
-		$(".project-entry:last"). append(HTMLprojectTitle.replace("%data%", projects.projects[i].title));
+		var projectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title)
+		$(".project-entry:last"). append(projectTitle.replace("#", projects.projects[i].url));
 		$(".project-entry:last"). append(HTMLprojectDates.replace("%data%", projects.projects[i].dates));
 		$(".project-entry:last"). append(HTMLprojectDescription.replace("%data%", projects.projects[i].description));
 		$(".project-entry:last"). append(HTMLprojectImage.replace("%data%", projects.projects[i].images));
