@@ -59,7 +59,7 @@ var projects = {
         "dates": "7/2016",
         "description": "A simple Frogger-style game built with Object Oriented JavaScript and HTML5 Canvas.",
         "images": ["images/arcade-clone.jpg"]
-        {
+    },  {
         "title": "Portfolio Project",
         "url": "https://github.com/baker-natalie/udacity-coursework/tree/master/baker-natalie.github.io-master",
         "dates": "6/2016",
