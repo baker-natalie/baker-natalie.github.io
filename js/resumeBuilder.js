@@ -54,7 +54,7 @@ bio.display();
 // projects object- project information
 var projects = {
     "projects": [{
-        "title": "Arcade Clone",
+        "title": "Arcade Clone- in progress!",
         "url": "http://baker-natalie.github.io/arcade-clone-project",
         "dates": "7/2016",
         "description": "A simple Frogger-style game built with Object Oriented JavaScript and HTML5 Canvas.",
