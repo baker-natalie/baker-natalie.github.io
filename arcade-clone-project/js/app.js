@@ -33,7 +33,7 @@ function getRandomInt(min, max) {
 }
 
 // Catalyst Super Class
-var Catalyst = function(x, y, img, boundaryRight, boundaryLeft, boundaryTop, boundaryBottom) {
+var Catalyst = function(x, y, img) {
     this.x = x;
     this.y = y;
     this.sprite = img;
@@ -48,6 +48,29 @@ Catalyst.prototype.updateLoc = function() {
     this.left = this.x;
     this.top = this.y;
     this.bottom = this.y;
+};
+
+// Player Class
+var Player = function(x, y) {
+    Catalyst.call(this, x, y, playerSprite);
+};
+
+Player.prototype = Object.create(Catalyst.prototype);
+Player.prototype.constructor = Player;
+Player.prototype.handleInput = function(keyCode) {
+    if(keyCode == 'up' && this.y > playerMoveYMin) this.y = this.y - canvasY;
+    else if(keyCode == 'down' &&  this.y < playerMoveYMax) this.y = this.y + canvasY;
+    else if(keyCode == 'left' && this.x > playerMoveXMin) this.x = this.x - canvasX;
+    else if(keyCode == 'right' && this.x < playerMoveXMax) this.x = this.x + canvasX;
+};
+
+Player.prototype.update = function() {
+    // If player crosses the board this resets the game ("Win")
+    if(this.y <= canvasTopOverlay) {
+        this.x = startLocX;
+        this.y = startLocY;
+        this.sprite = playerSprite;
+    }
 };
 
 // Enemy Class
@@ -70,36 +93,13 @@ Enemy.prototype.update = function(dt) {
         this.speed = getRandomInt(npcMinSpd, npcMaxSpd);
     }
     this.x = this.x + this.speed * dt;
-};
 
-// Player Class
-var Player = function(x, y) {
-    Catalyst.call(this, x, y, playerSprite);
-    this.alive = true;
-};
-
-Player.prototype = Object.create(Catalyst.prototype);
-Player.prototype.constructor = Player;
-Player.prototype.handleInput = function(keyCode) {
-    if(keyCode == 'up' && this.y > playerMoveYMin) this.y = this.y - canvasY;
-    else if(keyCode == 'down' &&  this.y < playerMoveYMax) this.y = this.y + canvasY;
-    else if(keyCode == 'left' && this.x > playerMoveXMin) this.x = this.x - canvasX;
-    else if(keyCode == 'right' && this.x < playerMoveXMax) this.x = this.x + canvasX;
-};
-
-Player.prototype.update = function() {
-    // If player crosses the board this resets the game ("Win")
-    if(this.y <= canvasTopOverlay) {
-        this.x = startLocX;
-        this.y = startLocY;
-        this.sprite = playerSprite;
-    }
-
-    // If player dies this resets the game ("Lose")
-    if (this.x == Enemy.x && this.y == Enemy.y) {
-    	this.x = startLocX;
-    	this.y = startLocY;
-    	this.sprite = playerSprite;
+    // Checks to see if player and enemy collide, resets game ('lose')
+    if(player.x >= this.x - 50 && player.x <= this.x + 50){
+        if(player.y >= this.y - 50 && player.y <= this.y + 50){
+            player.x = startLocX;
+            player.y = startLocY;
+        }
     }
 };
 

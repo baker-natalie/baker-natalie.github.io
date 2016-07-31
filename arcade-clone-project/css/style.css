@@ -1,3 +1,99 @@
 body {
     text-align: center;
 }
+
+.container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	font-family: 'Kurale', serif;
+}
+
+h1,
+h3 {
+	font-family: 'Syncopate', sans-serif;
+}
+
+#header {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 25px;
+	color: #fff;
+	background-color: #000;
+}
+
+#link-buttons {
+	width: 50%;
+}
+
+#github-button,
+#portfolio-button {
+	display: flex;
+	flex-wrap: wrap;
+	float: left;
+	margin-left: 0;
+	width: 25%;
+	background-color: #ddd;
+	border-radius: 15%;
+	margin: 5px;
+	text-align: center;
+}
+
+#page-title {
+	width: 50%;
+}
+
+#github-image,
+#portfolio-image {
+	min-width: 35px;
+	max-width: 35px;
+	max-width: 35px;
+	max-height: 35px;
+	border-radius: 100%;
+	padding: 10px;
+}
+
+#main {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+#game {
+	padding-left: 150px;
+	padding-top: 0;
+}
+
+#info-bar {
+	width: 33%;
+	background-color: #ddd;
+	margin: 10px;
+}
+
+#project-description,
+#game-instructions {
+	padding: 30px;
+}
+
+a:link {
+	color: #ff0;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ff0;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #000;
+	text-decoration: underline;
+}
