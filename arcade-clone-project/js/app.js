@@ -1,26 +1,26 @@
 /* Welcome! This is the third project for Udacity's Front-End Developer Nanodegree progrom. Create a frogger-style game using Object Oriented JavaScript and HTML5 Canvas. Students are provided with images and a game loop engine, and must build the game from there.
 
 All external sources referenced in code comments are linked in the project README at https://github.com/baker-natalie/udacity-coursework/tree/master/arcade-clone-project */
-// Canvas variables
+// Constant variables
 // -Canvas Grid Unit Size
 // -grid and movement layout by tile size based upon project by github user micyong
-var canvasY = 83;
-var canvasX = 101;
+var CANVAS_Y = 83;
+var CANVAS_X = 101;
 // -Grid Image Overlap
-var canvasTopOverlay = 50;
-var canvasBottomUnderlay = 20;
+var CANVAS_TOP_OVERLAY = 50;
+var CANVAS_BOTTOM_UNDERLAY = 20;
 // -Player Movement Boundaries
-var playerMoveYMin = 0 * canvasY + canvasTopOverlay;
-var playerMoveYMax = 5 * canvasY - canvasBottomUnderlay;
-var playerMoveXMin = 0;
-var playerMoveXMax = 4 * canvasX;
+var PLAYER_Y_MIN = 0 * CANVAS_Y + CANVAS_TOP_OVERLAY;
+var PLAYER_Y_MAX = 5 * CANVAS_Y - CANVAS_BOTTOM_UNDERLAY;
+var PLAYER_X_MIN = 0;
+var PLAYER_X_MAX = 4 * CANVAS_X;
 
 // Player Contstants
 // -Player Image
-var playerSprite = 'images/char-boy.png';
+var PLAYER_SPRITE = 'images/char-boy.png';
 // -Player Start Location
-var startLocX = canvasX * 2;
-var startLocY = canvasY * 5 - canvasBottomUnderlay;
+var START_LOC_X = CANVAS_X * 2;
+var START_LOC_Y = CANVAS_Y * 5 - CANVAS_BOTTOM_UNDERLAY;
 
 // NPC Constants
 // -NPC Image
@@ -50,25 +50,25 @@ Catalyst.prototype.render = function() {
 
 // Player Class
 var Player = function(x, y) {
-    Catalyst.call(this, x, y, playerSprite);
+    Catalyst.call(this, x, y, PLAYER_SPRITE);
 };
 
 Player.prototype = Object.create(Catalyst.prototype);
 Player.prototype.constructor = Player;
 // -handleInput function modified to fit grid layout as originally created by github user micyong
 Player.prototype.handleInput = function(keyCode) {
-    if (keyCode == 'up' && this.y > playerMoveYMin) this.y = this.y - canvasY;
-    else if (keyCode == 'down' && this.y < playerMoveYMax) this.y = this.y + canvasY;
-    else if (keyCode == 'left' && this.x > playerMoveXMin) this.x = this.x - canvasX;
-    else if (keyCode == 'right' && this.x < playerMoveXMax) this.x = this.x + canvasX;
+    if (keyCode == 'up' && this.y > PLAYER_Y_MIN) this.y = this.y - CANVAS_Y;
+    else if (keyCode == 'down' && this.y < PLAYER_Y_MAX) this.y = this.y + CANVAS_Y;
+    else if (keyCode == 'left' && this.x > PLAYER_X_MIN) this.x = this.x - CANVAS_X;
+    else if (keyCode == 'right' && this.x < PLAYER_X_MAX) this.x = this.x + CANVAS_X;
 };
 
 Player.prototype.update = function() {
     // If player crosses the board this resets the game ("Win")
-    if (this.y <= canvasTopOverlay) {
-        this.x = startLocX;
-        this.y = startLocY;
-        this.sprite = playerSprite;
+    if (this.y <= CANVAS_TOP_OVERLAY) {
+        this.x = START_LOC_X;
+        this.y = START_LOC_Y;
+        this.sprite = PLAYER_SPRITE;
     }
 };
 
@@ -86,9 +86,9 @@ Enemy.prototype.constructor = Enemy;
 Enemy.prototype.update = function(dt) {
 
     // Loops enemies to keep crossing the board
-    if (this.x > canvasX * 5) {
-        this.x = canvasX * -1;
-        this.y = canvasY * getRandomInt(1, 4) - canvasBottomUnderlay;
+    if (this.x > CANVAS_X * 5) {
+        this.x = CANVAS_X * -1;
+        this.y = CANVAS_Y * getRandomInt(1, 4) - CANVAS_BOTTOM_UNDERLAY;
         this.speed = getRandomInt(npcMinSpd, npcMaxSpd);
     }
     this.x = this.x + this.speed * dt;
@@ -97,19 +97,19 @@ Enemy.prototype.update = function(dt) {
     // -based upon collision function from project by github user danceoval
     if (player.x >= this.x - 50 && player.x <= this.x + 50) {
         if (player.y >= this.y - 50 && player.y <= this.y + 50) {
-            player.x = startLocX;
-            player.y = startLocY;
+            player.x = START_LOC_X;
+            player.y = START_LOC_Y;
         }
     }
 };
 
 // Game Initialization- calls the functions for Player and Enemy subclasses and instantiates them in the game
-var player = new Player(startLocX, startLocY);
+var player = new Player(START_LOC_X, START_LOC_Y);
 
 // -This function is based on the allEnemies function in the project by github user micyong
 var allEnemies = [];
 for (var i = 0; i < npcSpawn; i++)
-    allEnemies.push(new Enemy(canvasX * -1, canvasY * getRandomInt(1, 4) - canvasBottomUnderlay));
+    allEnemies.push(new Enemy(CANVAS_X * -1, CANVAS_Y * getRandomInt(1, 4) - CANVAS_BOTTOM_UNDERLAY));
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
