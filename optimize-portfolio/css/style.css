@@ -23,7 +23,7 @@ header, footer, .container { max-width: 45em; margin: 0 auto; }
 
 header { padding: 0 0.5em; color: #C90B0B; text-align: center; height: 150px; font-family: 'Dancing Script', cursive;}
 header p { font-size: 3em; font-weight: bold; width: 100%; }
-header p span { font-size: 0.5em; font-weight: normal; }
+header p span { font-size: 0.5em; font-weight: normal; max-width: 100%}
 header {
   background-image: url("river-tota-01.jpg");
   background-size: contain;
@@ -50,5 +50,4 @@ footer span { float: right; font-style: italic; }
 /* Smartphones (portrait) */
 @media only screen and (max-width: 480px) {
   body { font-size: 12px;}
-  header p { padding-left: 4.5em;}
 }
