@@ -12,7 +12,7 @@ In this project you are given a web-based application that reads RSS feeds. The 
 
 ### Live
 
-- Simply click the [link](http://feed-reader-testing.firebaseapp.com) to view the test!
+- Simply click the [link](http://baker-natalie.github.io/feed-reader-testing) to view the test!
 
 
 # Steps to Complete the Project
