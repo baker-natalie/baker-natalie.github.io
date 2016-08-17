@@ -54,6 +54,12 @@ bio.display();
 // projects object- project information
 var projects = {
     "projects": [{
+        "title": "Website Performance Optimization",
+        "url": "https://github.com/baker-natalie/optimization-project",
+        "dates": "8/2016",
+        "description": "A website that is optimized to render as quickly as possible.",
+        "images": ["images/web-perf.jpg"]
+    },  {
         "title": "Arcade Clone",
         "url": "https://github.com/baker-natalie/arcade-clone",
         "dates": "7/2016",
