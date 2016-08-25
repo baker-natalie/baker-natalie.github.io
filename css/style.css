@@ -272,8 +272,8 @@ span {
         display: none;
     }
 
-    .container  {
-        width: 105%;
+    body {
+        background-color: #435;
     }
 }
 
