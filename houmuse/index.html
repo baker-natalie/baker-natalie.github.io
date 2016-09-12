@@ -1,69 +1,45 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Welcome to Firebase Hosting</title>
-    <style media="screen">
-      body {
-        font-family: Roboto, Arial, sans-serif;
-        background: #ECEFF1;
-        color: rgba(0,0,0,0.87);
-      }
-
-      a {
-        color: rgb(3,155,229);
-      }
-
-      #message {
-        max-width: 400px;
-        margin: 40px auto;
-        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12);
-        border-radius: 2px;
-        background: white;
-        padding: 16px 24px;
-      }
-
-      #message h1 {
-        font-size: 22px;
-        font-weight: 500;
-        text-align: center;
-        margin: 0 0 16px;
-      }
-
-      #message p {
-        font-weight: 300;
-        line-height: 150%;
-      }
-
-      #message ul {
-        list-style: none;
-        margin: 16px 0 0;
-        padding: 0;
-        text-align: center;
-      }
-
-      #message li a {
-        display: inline-block;
-        padding: 8px;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: 500;
-        background: rgb(3,155,229);
-        color: white;
-        border: 1px solid rgb(3,155,229);
-        border-radius: 3px;
-        font-size: 14px;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h1>Welcome to Firebase Hosting</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <ul>
-        <li><a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a></li>
-      </ul>
-    </div>
-  </body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>HouMuse</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script src="js/knockout.js"></script>
+	</head>
+	<body>
+		<a href="#" onclick="toggle_visibility('options-box')"><img id="menu-toggle" src="menu-icon.png" /></a>
+		<div class="options-box">
+			<h1>HouMuse</h1><hr>
+			<div class ="error" data-bind="visible: foursqError">
+				<h4>We couldn't find the FourSquare data! Please try again later!</h4>
+			</div>
+			<div  class ="error" data-bind="visible: mapError">
+				<h2>We couldn't find the Google Map! Please try again later!</h2>
+			</div>
+				<div id="search-box">
+					<div>
+						<p>Search for a Museum:	<input class="filter" type="search" placeholder="Search" data-bind="textInput: userInput, event: {keyup: filterMarkers}"></p>
+						<h2>Houston Museums</h2><hr>
+					</div>
+					<div id="museums-list" data-bind="foreach: visible">
+						<p class="museum"><a href="#" data-bind="text: title, click: $parent.popInfoWindow"></a></p><hr>
+					</div>
+				</div>
+			</div>
+		<div id="mapDiv"></div>
+	</body>
 </html>
+<script type="text/javascript">
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+</script>
+<script asynd type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwYUgFAZRmyKAsqaKJdN7bT5kvFn7Pd3c&v=3&callback=initMap"></script>
