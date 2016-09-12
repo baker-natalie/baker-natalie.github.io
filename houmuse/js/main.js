@@ -2,6 +2,19 @@
 //****MAKE A MAP****//
 var map;
 var mapError = ko.observable(false);
+var toggle_visibility = function(id) {
+    var e = document.getElementById('list-view');
+    var mapStyle = document.getElementById('mapDiv')
+    if(e.style.display == 'block') {
+        e.style.display = 'none';
+      	mapStyle.style.left = '0';
+      	mapStyle.style.top = '50px';
+    } else {
+        e.style.display = 'block';
+      	mapStyle.style.left = '362px';
+      	mapStyle.style.top = '0';
+    };
+}
 
 function initMap() {
 		

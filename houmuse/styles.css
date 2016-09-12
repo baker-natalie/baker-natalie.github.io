@@ -1,9 +1,12 @@
-		html,
+	html,
       body {
         font-family: Arial, sans-serif;
         height: 100%;
         margin: 0;
         padding: 0;
+      }
+      body {
+        overflow-x: hidden;
       }
       input {
         font-size: 12px;
@@ -39,4 +42,13 @@
     }
     a {
     	color: #000000;
+    }
+    @media and (max-width: 799px) {
+        .options-box {
+            height: 20%;
+        }
+        #mapDiv {
+            height: 75%;
+            margin-left: 0;
+        }
     }
