@@ -29,7 +29,6 @@ function initMap() {
 	ko.applyBindings(new ViewModel());
 }
 
-//error message
 function googleError() {
 	mapError(true);
 }
