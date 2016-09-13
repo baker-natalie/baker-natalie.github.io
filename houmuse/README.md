@@ -4,7 +4,7 @@ A neighborhood map built with [Google Maps](https://developers.google.com/maps/d
 ## Getting Started
 **Run it locally**: clone/download this repository. Open index.html in your browser.
 
-**See it live**: [HouMuse]()
+**See it live**: [HouMuse](http://baker-natalie.github.io/houmuse)
 
 ## Resources
 - [JavaScript Design Patterns course](https://www.udacity.com/course/javascript-design-patterns--ud989)
@@ -15,6 +15,8 @@ A neighborhood map built with [Google Maps](https://developers.google.com/maps/d
 - [KnockoutJS Documentation](http://http://knockoutjs.com/documentation/introduction.html)
 - [FourSquare get venue- StackOverflow](http://stackoverflow.com/questions/9090743/foursquare-getting-and-displaying-venues-in-browser)
 - [jQuery.ajax()](http://api.jquery.com/jquery.ajax/)
+- [Handling Google Maps in Async and Fallback- Udacity Forums](https://discussions.udacity.com/t/handling-google-maps-in-async-and-fallback/34282)
+- 
 
 ## Project Requirements
 - **Interface Design**
