@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>HouMuse</title>
-		<link rel="stylesheet" type="text/css" href="styles.css">
-		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-		<script src="js/knockout.js"></script>
-	</head>
-	<body>
-		<header>
-			<div class="header-top">
-			<h1 class="header-text">HouMuse</h1>
-			<div class ="error" data-bind="visible: foursqError">
-				<h4>Uh-oh! We couldn't find the FourSquare data! Please try again later!</h4>
-			</div>
-			<div  class ="error" data-bind="visible: mapError">
-				<h2>Uh-oh! We couldn't find the Google Map! Please try again later!</h2>
-			</div>
-			</div>
-			<button class="hamburger">&#9776;</button>
-			<button class="close">&#735;</button>	
-		</header>
-		<div class="menu">
-			<h2>Houston Museums</h2><hr>
-			<p>Search for a Museum: <input class="filter" type="search" placeholder="Search" data-bind="textInput: userInput, event: {keyup: filterMarkers}"></p><hr>
-				<div data-bind="foreach: visible">
-					<p><a href="#" data-bind="text: title, click: $parent.popInfoWindow"></a></p><hr>
-					</div>
-				</div>
-			</div>
-		<div id="mapDiv"></div>
-	</body>
-</html>
 
-<script async type="text/javascript" src="js/main.js"></script>
-<script async type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwYUgFAZRmyKAsqaKJdN7bT5kvFn7Pd3c&v=3&callback=initMap"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HouMuse</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <h1 class="header-text">HouMuse</h1>
+            <div class="error" data-bind="visible: foursqError">
+                <h4>Uh-oh! We couldn't find the FourSquare data! Please try again later!</h4>
+            </div>
+            <div class="error" data-bind="visible: mapError">
+                <h2>Uh-oh! We couldn't find the Google Map! Please try again later!</h2>
+            </div>
+        </div>
+        <button class="hamburger">&#9776;</button>
+        <button class="close">&#735;</button>
+    </header>
+    <div class="menu">
+        <h2>Houston Museums</h2>
+        <hr>
+        <p>Search for a Museum:
+            <input class="filter" type="search" placeholder="Search" data-bind="textInput: userInput, event: {keyup: filterMarkers}">
+        </p>
+        <hr>
+        <div data-bind="foreach: visible">
+            <p>
+                <a href="#" data-bind="text: title, click: $parent.popInfoWindow"></a>
+            </p>
+            <hr>
+        </div>
+    </div>
+    <div id="mapDiv"></div>
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="js/knockout.js"></script>
+	<script async type="text/javascript" src="js/main.js"></script>
+	<script async type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwYUgFAZRmyKAsqaKJdN7bT5kvFn7Pd3c&v=3&callback=initMap"></script>
+</body>
+
+</html>
