@@ -37,15 +37,11 @@ function initMap() {
   // After map loads, apply knockout bindings
   ko.applyBindings(new ViewModel());
 
-  //error message
-  function googleError() {
-    mapError(true);
-  }
 }
 
-//****MAKE AN OBSERVABLE MUSEUM OBJECT****//
+//****MAKE A MUSEUM OBJECT****//
 var Museum = function(data) {
-
+  
   var self = this;
   self.address = ko.observable('');
   self.contentString = ko.observable('');
@@ -210,7 +206,7 @@ var ViewModel = function() {
         // Set the received venues object as the value of venue
         venue = data.response.hasOwnProperty("venues") ? data.response.venues[0] : '';
 
-        // check for the 'location' property and set it as a variable
+        // check for the 'location' property and set as current location
         location = venue.hasOwnProperty('location') ? venue.location : '';
         // check location for an address and set as current location's address
         if (location.hasOwnProperty('address')) {
@@ -218,7 +214,7 @@ var ViewModel = function() {
         }
         // check for  url property, set as current location's url
         url = venue.hasOwnProperty('url') ? venue.url : '';
-        museumData.url(url || '');
+        museumData.url((url) ? '<a href="' + url + '">website</a>' : 'No website available');
 
         // check for id property, set as current location's id
         id = venue.hasOwnProperty('id') ? venue.id : '';
@@ -227,15 +223,14 @@ var ViewModel = function() {
         // visualize that data with html!
         museumData.contentString = '<div><h2>' + museumData.title() + '</h2><p>' +
           museumData.address() + '</p><p><a target="_blank" href=https://www.google.com/maps/dir/Current+Location/' +
-          museumData.lat() + ',' + museumData.lng() + '>directions</a></p></div><p><a href="' +
-          museumData.url() + '">website</a></p><hr><h5>location data delivered by <a href="http://foursquare.com/v/' +
+          museumData.lat() + ',' + museumData.lng() + '>directions</a></p></div><p>' +
+          museumData.url() + '</p><hr><h5>location data delivered by <a href="http://foursquare.com/v/' +
           museumData.id() + '?ref=RUPSQ1M0LNZPFTN52BH52BBTCZYKWTJ1HEY41W1JPXKY5KI3">FourSquare</a></h5>';
       },
 
       // populate an error message in the infowindow if the foursquare data doesn't load
       error: function(e) {
         infowindow.setContent('<p>We couldn\'t find the FourSquare data! Please try again later!</p>');
-        self.foursqError(true);
       }
     });
     // make some infoWindows!
