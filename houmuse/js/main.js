@@ -2,19 +2,7 @@
 //****MAKE A MAP****//
 var map;
 var mapError = ko.observable(false);
-var toggle_visibility = function(id) {
-    var e = document.getElementById('list-view');
-    var mapStyle = document.getElementById('mapDiv')
-    if(e.style.display == 'block') {
-        e.style.display = 'none';
-      	mapStyle.style.left = '0';
-      	mapStyle.style.top = '50px';
-    } else {
-        e.style.display = 'block';
-      	mapStyle.style.left = '362px';
-      	mapStyle.style.top = '0';
-    };
-}
+
 
 function initMap() {
 		
@@ -27,10 +15,11 @@ function initMap() {
 
 	// After map loads, apply knockout bindings
 	ko.applyBindings(new ViewModel());
-}
 
-function googleError() {
-	mapError(true);
+	//error message
+	function googleError() {
+		mapError(true);
+	}
 }
 
 //****MAKE AN OBSERVABLE MUSEUM OBJECT****//
@@ -44,6 +33,7 @@ var Museum = function(data) {
 	self.marker = ko.observable();
 	self.title = ko.observable(data.title);
 	self.url = ko.observable('');
+	self.id = ko.observable('');
 };
 
 //****MODEL****//
@@ -75,11 +65,13 @@ var ViewModel = function () {
 
 	var self = this;
 	var	infowindow = new google.maps.InfoWindow({maxWidth:250});
+	var bounds = new google.maps.LatLngBounds();
 	var	venue;
 	var	location;
 	var	marker;
 	var	UserInput;
 	var	url;
+	var id;
 	var	image = 'museum-icon.png';
 
 	// an observable array that stores converted data from the model
@@ -103,13 +95,16 @@ var ViewModel = function () {
 			icon: image,
 			animation: google.maps.Animation.DROP
 		});
+		bounds.extend(marker.position);
 		museumData.marker = marker;
 
 		// make an ajax api call to FourSquare and collect data to display in the infoWindows
 		$.ajax({
 			url:'https://api.foursquare.com/v2/venues/search',
 			dataType: 'json',
-			data: 'limit=1' + '&ll=29.728759,-95.387390' + '&query=' + museumData.title() + '&client_id=RUPSQ1M0LNZPFTN52BH52BBTCZYKWTJ1HEY41W1JPXKY5KI3&client_secret=2AQTFD2TO0FY5AFFNAAASI1RQTHZUF3LKJEXLJPLXD4PACNM&v=20130815',
+			data: 'limit=1' + '&ll=29.728759,-95.387390' + '&query=' + museumData.title() +
+			'&client_id=RUPSQ1M0LNZPFTN52BH52BBTCZYKWTJ1HEY41W1JPXKY5KI3' +
+			'&client_secret=2AQTFD2TO0FY5AFFNAAASI1RQTHZUF3LKJEXLJPLXD4PACNM&v=20130815',
 			async: true,
 
 			// if the call is completed successfully, the success function will pull the information we want to display and format it for HTML.
@@ -127,9 +122,16 @@ var ViewModel = function () {
 				url = venue.hasOwnProperty('url') ? venue.url : '';
 					museumData.url(url || '');
 
+				// check for id property, set as current location's id
+				id = venue.hasOwnProperty('id') ? venue.id : '';
+					museumData.id(id || '');
+
 				// visualize that data with html!
-				museumData.contentString = '<div id="iWindow"><h2>' + museumData.title() + '</h2><p>' + museumData.address() + '</p><p><a target="_blank" href=https://www.google.com/maps/dir/Current+Location/' +
-						museumData.lat() + ',' + museumData.lng() + '>directions</a></p></div><p><a href="' + museumData.url() + '">website</a></p><hr><h5>location data delivered by FourSquare</h5>';	
+				museumData.contentString = '<div><h2>' + museumData.title() + '</h2><p>' +
+				museumData.address() + '</p><p><a target="_blank" href=https://www.google.com/maps/dir/Current+Location/' +
+				museumData.lat() + ',' + museumData.lng() + '>directions</a></p></div><p><a href="' +
+				museumData.url() + '">website</a></p><hr><h5>location data delivered by <a href="http://foursquare.com/v/' + 
+				museumData.id() + '?ref=RUPSQ1M0LNZPFTN52BH52BBTCZYKWTJ1HEY41W1JPXKY5KI3">FourSquare</a></h5>';	
 			},
 
 			// populate an error message in the infowindow if the foursquare data doesn't load
@@ -149,9 +151,15 @@ var ViewModel = function () {
 		});
 	});
 
+	map.fitBounds(bounds);
+
 	// connect the list items to the correct marker on click
 	self.popInfoWindow = function (museumData) {
 		google.maps.event.trigger(museumData.marker, 'click');
+		$(".menu").slideToggle("slow", function() {
+    		$(".close").hide();
+    		$(".hamburger").show();
+  		});
 	};
 
 	// empty observable array to contain search results
@@ -186,4 +194,20 @@ var ViewModel = function () {
 			place.marker.setVisible(true);
 		});
 	};
+	
 };
+$(".close").hide();
+$(".menu").hide();
+$(".hamburger").click(function() {
+  $(".menu").slideToggle("slow", function() {
+    $(".hamburger").hide();
+    $(".close").show();
+  });
+});
+
+$(".close").click(function() {
+  $(".menu").slideToggle("slow", function() {
+    $(".close").hide();
+    $(".hamburger").show();
+  });
+});

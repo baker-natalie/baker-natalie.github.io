@@ -1,10 +1,10 @@
 # HouMuse- Houston Museum Finder
-### This app is being built for project 5 of Udacity's Front-End Developer Nanodegree
+### This app was built for project 5 of Udacity's Front-End Developer Nanodegree
 A neighborhood map built with [Google Maps](https://developers.google.com/maps/documentation/) that shows selected locations of interest. The locations should be filterable, and each location should display information pulled from a third-party API. HouMuse proudly draws data from the [FourSquare](https://developer.foursquare.com/overview/) API. 
 ## Getting Started
 **Run it locally**: clone/download this repository. Open index.html in your browser.
 
-**See it live**: [HouMuse](http://baker-natalie.github.io/houmuse)
+**See it live**: [HouMuse]()
 
 ## Resources
 - [JavaScript Design Patterns course](https://www.udacity.com/course/javascript-design-patterns--ud989)
@@ -15,8 +15,8 @@ A neighborhood map built with [Google Maps](https://developers.google.com/maps/d
 - [KnockoutJS Documentation](http://http://knockoutjs.com/documentation/introduction.html)
 - [FourSquare get venue- StackOverflow](http://stackoverflow.com/questions/9090743/foursquare-getting-and-displaying-venues-in-browser)
 - [jQuery.ajax()](http://api.jquery.com/jquery.ajax/)
-- [Handling Google Maps in Async and Fallback- Udacity Forums](https://discussions.udacity.com/t/handling-google-maps-in-async-and-fallback/34282)
-- 
+- [Setting CSS Styles Using JavaScript- Kirupa](https://www.kirupa.com/html5/setting_css_styles_using_javascript.htm)
+- [Toggle Visibility - Show/Hide Anything- Movalog](http://blog.movalog.com/a/javascript-toggle-visibility/)
 
 ## Project Requirements
 - **Interface Design**
@@ -58,3 +58,7 @@ A neighborhood map built with [Google Maps](https://developers.google.com/maps/d
   - Style different markers in different (and functionally-useful) ways.
   - Implement additional optimizations that improve performance and UX of the filter functionality.
   - Integrate all app components into a cohesive and enjoyable user experience.
+
+##Future Functionality
+- Filter locations by tag
+- Itenerary planner
