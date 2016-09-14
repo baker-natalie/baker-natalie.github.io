@@ -54,6 +54,12 @@ bio.display();
 // projects object- project information
 var projects = {
     "projects": [{
+        "title" : "Neighborhood Map- HouMuse",
+        "url" : "https://github.com/baker-natalie/neighborhood-map",
+        "dates" : "8/2016-9/2016",
+        "description" : "A map built using the Google Maps API that shows data drawn from another third party API. My map shows museums in Houston, TX's Museum District and their Foursquare data."
+        "images" : ["images/houmuse.jpg"]
+    }, {
         "title": "Website Performance Optimization",
         "url": "https://github.com/baker-natalie/optimization-project",
         "dates": "8/2016",
