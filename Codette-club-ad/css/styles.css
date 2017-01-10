@@ -1,0 +1,52 @@
+.ad {
+	width: 800px;
+	max-width: 100%;
+	font-family: 'Fira Mono', monospace;
+	color: #414141;
+	padding: 0;
+	border: solid 1px #414141;
+}
+img {
+	max-width: 100%;
+}
+h1, button {
+	font-family: 'Grand Hotel', cursive;
+}
+header, footer {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+}
+.logo {
+	background-image: url("../images/logo.png");
+	width: 25%;
+	padding-top: 25%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.header-text {
+	text-align: right;
+	width: 75%;
+	margin: auto 0 10px auto;
+}
+.footer-text {
+	width: auto;
+}
+footer h4 {
+	margin: 0;
+}
+footer ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+footer li {
+	float: left;
+	display: block;
+}
+button {
+	width: 200px;
+	font-size: 1.6em;
+	margin: auto 10px 10px auto;
+}
