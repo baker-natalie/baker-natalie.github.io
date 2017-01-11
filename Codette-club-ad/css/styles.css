@@ -1,5 +1,5 @@
 .ad {
-	width: 800px;
+	width: 400px;
 	max-width: 100%;
 	font-family: 'Fira Mono', monospace;
 	color: #414141;
@@ -9,8 +9,13 @@
 img {
 	max-width: 100%;
 }
-h1, button {
+h1 {
 	font-family: 'Grand Hotel', cursive;
+	margin: 0;
+}
+.header-text p {
+	font-size: 1em;
+	margin: 0;
 }
 header, footer {
 	display: flex;
@@ -19,15 +24,15 @@ header, footer {
 }
 .logo {
 	background-image: url("../images/logo.png");
-	width: 25%;
-	padding-top: 25%;
+	width: 20%;
+	padding-top: 20%;
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 .header-text {
 	text-align: right;
-	width: 75%;
+	width: 80%;
 	margin: auto 0 10px auto;
 }
 .footer-text {
@@ -39,14 +44,32 @@ footer h4 {
 footer ul {
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
+	padding: 0.9em 0 0 0;
 }
 footer li {
 	float: left;
 	display: block;
+	width: 0.8em;
+	height: 0.8em;
+	padding-right: 0.1em;
 }
 button {
-	width: 200px;
-	font-size: 1.6em;
-	margin: auto 10px 10px auto;
+	width: 180px;
+	font-size: 1em;
+	margin: auto 0 0 auto;
+	letter-spacing: -0.7;
+	border-radius: 3%;
+	background-color: #357e98;
+	border: none;
+	-webkit-box-shadow: inset 0 0 30px #275c6f;
+    -moz-box-shadow: inset 0 0 30px #275c6f;
+    box-shadow: inset 0 0 30px 3px #275c6f;
+}
+button p {
+	margin: 0;
+	padding: 0.8em;
+	color: #ffffff;
+	text-shadow: 1px 1px #275c6f;
+	font-family: 'Fira Mono', monospace;
+	font-weight: 900;
 }
