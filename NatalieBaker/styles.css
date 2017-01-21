@@ -1,0 +1,135 @@
+.container {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.quicksand {
+	font-family: 'Quicksand', sans-serif;
+}
+
+.sacramento {
+	font-family: 'Sacramento', sans-serif;
+}
+
+.header {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header-image {
+	float: left;
+}
+
+.header-logo {
+	height: 200px;
+	max-width: 200px;
+	float: left;
+	padding: 10px;
+}
+
+.header-text {
+	float: right;
+	text-align: right;
+	margin-bottom: 0;
+	padding: 5px;
+}
+
+.bio {
+	height: 100%;
+	padding: 2em;
+	background: #EAECEE;
+	margin-top: 10px;
+}
+
+.profile-pic {
+	max-width: 300px;
+	padding: 40px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.nav-list {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-top: 2em;
+}
+
+li {
+	display: inline-block;
+}
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+}
+
+.project-info {
+	height: 100%;
+}
+
+.project-text {
+	text-align: center;
+}
+
+.project-img {
+	width: 100%;
+	height: 100%;
+}
+
+.jitb-img {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.funvector {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.footer-logo {
+	height: 100px;
+	max-width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.copy {
+	width: 100%;
+	text-align: center;
+}
+
+@media (min-width: 1400px) {
+	body {
+		background-image: url(images/tina-border-large.png);
+		background-size: cover;
+	}
+
+}
+
+@media (max-width: 1000px) {
+	.header-text {
+		text-align: center;
+		float: none;
+	}
+
+	.header-image {
+		margin-right: auto;
+		margin-left: auto;
+		float: none;
+	}
+
+	.header-logo {
+		float: none;
+		padding: 0;
+		max-width: 150px;
+		max-height: 150px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
