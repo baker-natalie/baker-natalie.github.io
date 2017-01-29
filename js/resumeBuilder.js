@@ -3,7 +3,7 @@ var bio = {
     "name": "Natalie Baker",
     "role": "Front-End Developer",
     "contacts": {
-        "mobile": "713-245-0099",
+        "mobile": "***-***-****",
         "email": "bakernataliea@gmail.com",
         "github": "baker-natalie",
         "twitter": "ohcodinglady",
