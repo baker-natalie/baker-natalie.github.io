@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "MoolBoran";
+  src: url('./font/MoolBoran.ttf');
+}
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url(''https://fonts.googleapis.com/css?family=Alegreya+Sans'')
+}
+body {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.8em;
+  color: #1a1a1a;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100vh;
+  width: 100%;
+}
+article {
+  padding: 4vh 0 4vh 0;
+}
+h1,
+h2 {
+  font-family: "MoolBoran", serif;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+}
+.home-img {
+  height: 25%;
+  background-size: cover;
+  opacity: 0.7;
+}
+.container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.nav-menu {
+  list-style-type: none;
+  padding-top: 1%;
+}
+.nav-link {
+  color: #1a1a1a;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.login {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  padding: 1%;
+  color: #454545;
+}
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active,
+.login:hover,
+.address a:hover {
+  color: #fed123;
+  text-decoration: none;
+}
+main {
+  max-width: 100%;
+}
+.main-header {
+  position: relative;
+  top: 40vh;
+  max-width: 100%;
+}
+#services {
+  color: #fff;
+  background-color: #1a1a1a;
+}
+.serviceDiv {
+  margin-top: 5%;
+  padding: 5%;
+  height: 35vh;
+  background-size: cover;
+  opacity: 0.7;
+}
+.contact-form {
+  width: 100%;
+  border: none;
+  height: 110vh;
+}
+footer {
+  color: #ffffff;
+  background-color: #1a1a1a;
+}
+.address {
+  line-height: 0.7;
+  padding: 2%;
+}
+.address a {
+  color: #ffffff;
+  text-decoration: none;
+}
+@media only screen and (min-width: 23em) {
+  .contact-form {
+    height: 90vh;
+  }
+}
+@media only screen and (min-width: 48em) {
+  article,
+  #serviceContainer {
+    margin-left: 8.333%;
+  }
+  .main-header {
+    top: 35vh;
+    width: 60vw;
+    margin-left: calc(50% - 30vw);
+  }
+  .home-img {
+    height: 33.333%;
+  }
+  .login {
+    top: 0;
+  }
+  #services {
+    margin: 0;
+    width: 100%;
+  }
+  .serviceDiv {
+    margin: 0 4.166% 0 4.166%;
+    height: 25vh;
+    padding: 2%;
+  }
+  .contact-form {
+    height: 80vh;
+  }
+}
+@media only screen and (min-width: 62em) {
+  article,
+  #serviceContainer {
+    margin-left: 16.667%;
+  }
+}
+@media only screen and (min-width: 128em) {
+  body {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 256em) {
+  body {
+    font-size: 3em;
+  }
+}
+@media only screen and (min-width: 320em) {
+  body {
+    font-size: 5em;
+  }
+}
