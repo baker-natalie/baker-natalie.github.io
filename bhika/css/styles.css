@@ -77,8 +77,9 @@ main {
   top: 35vh;
   max-width: 100%;
 }
-#services {
+#capabilities {
   color: #fff;
+  height: 5vh;
   background-color: #1a1a1a;
 }
 .serviceDiv {
@@ -129,7 +130,7 @@ footer {
   .login {
     top: 0;
   }
-  #services {
+  #capabilities {
     margin: 0;
     width: 100%;
   }
