@@ -75,8 +75,8 @@ about.display = function() {
   };
   top();
 };
-var services = {
-  "id": "services",
+var capabilities = {
+  "id": "capabilities",
   "header": "What We Offer",
   "description": [
     {
@@ -94,28 +94,28 @@ var services = {
     }
   ]
 };
-services.display = function() {
-  var addContent = function() {
-    $("#services").append(HTMLheader.replace("%text%", services.header));
-    $("#services").append("<div id='serviceContainer' class='col-xs-12 col-md-10 col-lg-8'></div>");
-    for (var i = 0; i < services.description.length; i++) {
+capabilities.display = function() {
+  /*var addContent = function() {
+    $("#capabilities").append(HTMLheader.replace("%text%", capabilities.header));
+    $("#capabilities").append("<div id='serviceContainer' class='col-xs-12 col-md-10 col-lg-8'></div>");
+    for (var i = 0; i < capabilities.description.length; i++) {
       var serviceContent = function() {
         var formattedServiceText = HTMLtext.replace("%class%", "service-text text-justify");
-        $(".serviceDiv:last").append(HTMLserviceHeader.replace("%text%", services.description[i].title));
-        $(".serviceDiv:last").append(formattedServiceText.replace("%text%", services.description[i].description));
+        $(".serviceDiv:last").append(HTMLserviceHeader.replace("%text%", capabilities.description[i].title));
+        $(".serviceDiv:last").append(formattedServiceText.replace("%text%", capabilities.description[i].description));
       }
       var initiate = function() {
-        $("#serviceContainer").append(HTMLserviceDiv.replace("%img%", services.description[i].img));
+        $("#serviceContainer").append(HTMLserviceDiv.replace("%img%", capabilities.description[i].img));
         serviceContent();
       }
       initiate();
     };
-  };
+  };*/
   var top = function() {
-    var formattedArticle = HTMLarticle.replace("%id%", services.id);
+    var formattedArticle = HTMLarticle.replace("%id%", capabilities.id);
     $("#main").append(formattedArticle);
 
-    addContent();
+    //addContent();
   };
   top();
 }
@@ -148,5 +148,5 @@ contact.display = function() {
 
 //home.display();
 about.display();
-services.display();
+capabilities.display();
 contact.display();
