@@ -12,8 +12,20 @@ var home = {
   "id": "home",
   "portal": "#",
   "logo": "../img/logo.png",
-  "class": "col-xs-4 col-sm-3 home-img",
+  "class": "col-xs-3 col-sm-2 home-img",
   "bgImages": [
+    "bg-1.jpg",
+    "bg-2.jpg",
+    "bg-3.jpg",
+    "bg-4.jpg",
+    "bg-5.jpg",
+    "bg-6.jpg",
+    "bg-7.jpg",
+    "bg-8.jpg",
+    "bg-9.jpg",
+    "bg-10.jpg",
+    "bg-11.jpg",
+    "bg-12.jpg",
     "bg-1.jpg",
     "bg-2.jpg",
     "bg-3.jpg",
@@ -134,7 +146,7 @@ contact.display = function() {
   top();
 }
 
-home.display();
+//home.display();
 about.display();
 services.display();
 contact.display();
