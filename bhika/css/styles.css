@@ -21,6 +21,7 @@ header {
   background-image: url(../img/test.jpg);
   background-size: cover;
   background-position: center;
+  border-bottom: 5vh solid #1a1a1a;
 }
 article {
   padding: 4vh 0 4vh 0;
