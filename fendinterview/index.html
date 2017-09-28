@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Natalie Baker | Front End Interview Dry-Run</title>
+	<style type="text/css">
+		header,
+		h1,
+		h2 {
+			width: 100%;
+			text-align: center;
+		}
+		.container {
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+			max-width: 1000px;
+			font-family: sans-serif;
+		}
+		.question {
+			background-color: #ddd;
+		}
+		#answer {
+			width: 100%;
+			background-color: #fff;
+		}
+		span {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+<header><h1>Natalie Baker</h1><h2>Front-End Interview Dry-Run</h2></header>
+<ol>
+<li class="question">What is the most influential book or blog post you've read regarding front-end development?
+<p id="answer">When I started working with HTMl and CSS at the beginnaing of this year, I had a lot of ideas about what I wanted to create, but I wasn't sure what I needed to know and do to get there. I came across <a href="https://skillcrush.com/2016/02/11/skills-to-become-a-front-end-developer/">Exactly What You Need to Know to be a Front End Developer</a> by <a href="https://twitter.com/cameron_chapman">Cameron Chapman</a> on the Skillcrush <a href="https://skillcrush.com/blog">blog</a>, and it gave me a roadmap to start plotting my course to becoming a developer myself.<br><br>I already knew that I needed to learn HTML, CSS, and Javascript, but those are actually all really wide categories, and there is a lot of supporting knowledge that is not encompassed by simply learning the basics of those three languages. This article pointed out the importance of learning skills like testing, debugging, Git, command line, frameworks, libraries, and even more supporting skills.<br><br>The article also points out the importance of problem solving skills, and lists various resources to help readers learn more about the topic. In a sea of information for new and seasoned developers, this was one of the first resources I found that gave me a full picture of waht I needed to learn, and also gave me the confidence to pursue it.</p>
+</li>
+
+<li class="question">If you could master one technology this year, what would it be and why?<p id="answer"></p>
+<p id="answer">I want to learn everything! Right now I am working on really understanding and mastering Javascript. It is everywhere, and it is very versatile. In addition to building various browser-based applications, being competent with Javascript and its libraries and frameworks can be a good way to start moving into full stack development, which is my ultimate goal. I have recently learned how to use Knockout.js for UI updates, and my immediate plan for continued learning is working with React.js for data visualization and manipuating the DOM.</p>
+</li>
+
+<li class="question">Describe any front-end web application framework (preferably one that you use). How does it work? What are the upsides and downsides?
+<p id="answer">Bootstrap is the first framework I have used, and it is easy to see why it's so popular! It is simple to build functional mobile responsive pages by setting special classes to change the way the page renders based on screen size. Bootstrap's column classes also make styling the page simpler and more intuitive, since they are built on a grid. You can set the width for elements to render differently depending on the size of the screen. On a mobile phone, an image can be full width, with content elements above and below it. The same elements can be set to half-width on a desktop monitor and display side by side with the image. Other special classes allow developers to style the page as well by simply adding them to the targeted element. A minor drawback is that if the user hasn't already visited a page that utilizes Bootstrap, they may have to download it which can slow down the initial page load, but since it is such a popular framework, it's likely that most users will have the information already cached from another site.</p>
+</li>
+
+<li class="question">Write a JavaScript function that takes only one argument--another function--and returns a "memoized" version of that function. A "memoized" version of a function caches and returns the results of its call so that when it is called again with the same input, it doesn't run its computation but instead returns the results from cache. Note that previous results should be retrievable in any order without re-computation.
+<p id="answer">This is a memoized function that checks a name against a list of names: If it is on the list, the function will alert the user. If the name is not on the list, it will be added. Check the console to see live results and pass your own name as a value to the namesList!<br>
+To try it out, open the console by typing <code>ctrl + shift + j</code> Just type <code>namesList('YOUR NAME HERE');</code> into the console and press enter!
+<pre><code>
+// Our memoizing function
+var namesList = (function() {
+  var cache = {};
+  var disallowed = 'Jonathan';
+
+  function n(name) {
+    // Check to see if name is already a stored value
+    if(name in cache) {
+      // Alert the user that the function has pulled stored data
+      console.log('cached data');
+      console.log(cache);
+      return cache[name];
+    }
+
+    // If name is not already cached, it will be added unless it's value is the same as disallowed
+    cache[name] = name !== disallowed;
+    console.log(cache);
+    return cache;
+  }
+  return n;
+})();
+
+// Call the function to see the results in the console
+namesList('Karen'); // will return true
+namesList('Jonathan'); // will return false
+namesList('Erica'); // will return true
+namesList('Karen'); // will return cached data + true
+
+
+</code></pre>
+</p>
+</li>
+
+<li class="question">Create a simple webpage that has a cow image in the middle (centered horizontally on the page) and a counter label below it. Add the necessary code so that every time you click the cow image, the counter is incremented by 1. The counter should start with a value of 0.You should include a brief explanation of your code.
+
+<p id="answer">My cow clicker page is viewable <a href="cowpage/index.html">here</a>. The CSS absolute positions for the cow image (#cow) at 50% for the top and left within the parent (.container) and then uses a negative margin of half the width and height of the image (also at top and left) to center it vertically and horizontally on the page. The initial vaule of 0 clicks is appended below the image and updates via an addEventListener function increments and appends the new value of clicks.</p>
+</li>
+
+<p><span>Job Description: Kissmetrics: Web & Front End Developer</span><br>
+
+
+Do you love digging into new web and app functionality? Are you a problem-solver who's curious about learning and managing different systems? Do you know the ins and outs of JavaScript, HTML5 and CSS?<br>
+
+We are looking for a web developer who would tackle code projects across marketing and engineering. If you're just diving into the software universe and want to learn how everything really works, we've got just the place for you to start.<br>
+
+Help us build solutions that make you and our customers happy.</p>
+
+<li class="question">If you were to start your front-end position today, what would be your goals a year from now?
+<p id="answer">If I were to start this job today, I would be focused on improving my speed and knowledge for implementing front-end solutions. I would also work to learn how to use back-end technologies. At the end of a year, my goal would be preparedness for a full stack development role, for example a <a href="http://grow.kissmetrics.com/careers/software-developer">Software Developer</a> at Kissmetrics.<br><br>As I mentioned earlier, I am interesting in continuing working with Javascript, and I am currently working through the certifications at <a href="http://freecodecamp.com">Free Code Camp</a>, as well as recently completing a Front End Developer Nanodegree at <a href="http://www.udacity.com">Udacity</a> and working on personal projects to teach myself these concepts. Beyond Javascript, I am interested in learning Ruby on Rails, and continuing to build supporting skills.<br><br>Ultimately, if I were to start this job today, I would take on new challenges and work hard to support my team, so that after a year I will have grown noticably as a developer.</p>
+</li>
+</ol>
+</div>
+<script>
+var namesList = (function() {
+  var cache = {};
+  var disallowed = 'Jonathan';
+
+  function n(name) {
+    if(name in cache) {
+      console.log('cached data');
+      console.log(cache);
+      return cache[name];
+    }
+
+    cache[name] = name !== disallowed;
+    console.log(cache);
+    return cache;
+  }
+  return n;
+})();
+
+namesList('Karen');
+namesList('Jonathan');
+namesList('Erica');
+namesList('Karen');
+</script>
+</body>
+</html>
