@@ -19,7 +19,7 @@ var data = [
         "thumbnail": "",
         "desc": "***IN DEVELOPMENT***",
         "repoUrl": "",
-        "demoUrl": ""
+        "demoUrl": "http://nataliebaker.me/thiswomancodes"
       }, {
         "id": "duplicate",
         "title": "DevExpress Duplicate Row",
@@ -51,7 +51,7 @@ var data = [
         "thumbnail": "",
         "desc": "Design and develop logo, color scheme, and website.",
         "repoUrl": "https://github.com/baker-natalie/baker-natalie.github.io/tree/master/bhika",
-        "demoUrl": "http://baker-natalie.github.io/bhika/"
+        "demoUrl": "http://nataliebaker.me/bhika/"
       }, {
         "id": "lugus",
         "title": "Lugus Aero",
@@ -75,7 +75,7 @@ var data = [
         "thumbnail": "",
         "desc": "Build an interactive map that displays information about an array of locations using the GoogleMaps API",
         "repoUrl": "https://github.com/baker-natalie/baker-natalie.github.io/tree/master/houmuse",
-        "demoUrl": "https://baker-natalie.github.io/houmuse"
+        "demoUrl": "https://nataliebaker.me/houmuse"
       }
     ]
   }, {
