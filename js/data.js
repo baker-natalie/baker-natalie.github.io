@@ -28,7 +28,7 @@ var data = [
         "desc": "Create a custom button on an editable grid view that allows users to duplicate a row of data",
         "repoUrl": "",
         "demoUrl": ""
-      }, {
+      }, /*{
         "id": "tutorial",
         "title": "Knack Modal User Guide",
         "img": "knack.png",
@@ -36,7 +36,7 @@ var data = [
         "desc": "Create a popup tutorial using javascript and the built in modal dialog in Knack Builder",
         "repoUrl": "",
         "demoUrl": ""
-      }, {
+      }, */{
         "id": "webview",
         "title": "DevExpress Data Web View",
         "img": "webview.png",
