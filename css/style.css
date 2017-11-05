@@ -77,4 +77,7 @@ section {
     padding: 0 !important;
     width: 100% !important;
   }
+  .project {
+    height: 40vh;
+  }
 }
