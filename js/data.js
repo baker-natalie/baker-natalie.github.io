@@ -12,8 +12,8 @@ var data = [
     "id": "work",
     "header": "Stuff I've Made:",
     "projects": [
-      {
-        /*"id": "woman",
+      /*{
+        "id": "woman",
         "title": "This Woman Codes",
         "img": "woman.png",
         "thumbnail": "",
