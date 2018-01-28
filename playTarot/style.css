@@ -35,6 +35,9 @@ body{
 .wands{
   background-image: url(./img/wand.png);
 }
+.major{
+	background-image: url(./img/queen.png);
+}
 .back{
   display: flex;
   flex-wrap: wrap;

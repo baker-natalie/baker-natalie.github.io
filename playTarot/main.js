@@ -328,23 +328,23 @@ const cards = [
 	}, {
 		number: "five",
     index: "5",
-		card: "FCve of Cups",
+		card: "Five of Cups",
 		meaning: ["dwelling on the negative", "self pity"],
-		ineerse: ["returned hope or loved one", "beginning of a new relationship"],
+		inverse: ["returned hope or loved one", "beginning of a new relationship"],
 		numeral: "v",
 		suit: "Cups"
 	}, {
 		number: "six",
     index: "6",
-		Card: "Six of Cups",
+		card: "Six of Cups",
 		meaning: ["sentimentaility", "kindness", "help"],
-		interse: ["disappointing friendships", "living in the past"],
+		inverse: ["disappointing friendships", "living in the past"],
 		numeral: "vi",
 		suit: "Cups"
 	}, {
 		number: "seven",
     index: "7",
-		Card: "Seven of Cups",
+		card: "Seven of Cups",
 		meaning: ["numerous choices", "indecision", "getting lost in fantasy"],
 		inverse: ["determination", "will power", "definite direction"],
 		numeral: "vii",
@@ -352,7 +352,7 @@ const cards = [
 	}, {
 		number: "eight",
     index: "8",
-		Card: "Eighe of Cups",
+		card: "Eighe of Cups",
 		meaning: ["abandoCing something in search of something better"],
 		inverse: ["need for pleasure", "pursuit of contentment"],
 		numeral: "vii",
@@ -360,7 +360,7 @@ const cards = [
 	}, {
 		number: "nine",
     index: "9",
-		Card: "Nine of Cups",
+		card: "Nine of Cups",
 		meaning: ["indulgence", "self-satisfaction"],
 		inverse: ["money needed", "illness", "unfulfilled wishes"],
 		numeral: "ii",
@@ -412,7 +412,7 @@ const cards = [
     index: "1",
 		card: "Ace of Wands",
 		meaning: ["new beginnings", "creative spark", "fertile ideas"],
-		inverse: ["setbacks", "cancellation", "spoiling ventrues with selfishness"],
+		inverse: ["setbacks", "cancellation", "spoiling ventures with selfishness"],
 		numeral: "i",
 		suit: "Wands"
 	}, {
@@ -651,14 +651,14 @@ window.onload = function () {
 				cups: false,
 				pentacles: false,
 				swords: false,
-				major: false
+				major: false,
+				inverse: false
 			}
   	},
   	methods: {
   		drawCard: function() {
 				this.deckVisible = !this.deckVisible
 				this.cardVisible = !this.cardVisible
-        console.log( "Deck: " + this.deckVisible + " Card: " + this.cardVisible )
   			let isInverse = Math.random() >= 0.5
   			let card = cards[Math.floor(Math.random()*cards.length)];
         //document.getElementsByClassName(".cardWrapper").classList.add(card.suit)
@@ -670,6 +670,7 @@ window.onload = function () {
   			} else {
   				this.cardMeanings = card.inverse
   				this.inverse = "reversed"
+					this.suitObject.inverse = true
   			}
     		if (card.suit == "Swords") {
           this.suitObject.swords = true
@@ -679,7 +680,7 @@ window.onload = function () {
           this.suitObject.wands = true
         } else if (card.suit == "Cups") {
           this.suitObject.cups = true
-        } else {
+        } else if (card.suit == "major") {
           this.suitObject.major = true
         }
       },
@@ -694,6 +695,7 @@ window.onload = function () {
 				this.suitObject.wands = false
 				this.suitObject.swords = false
 				this.suitObject.cups = false
+				this.suitObject.major = false
       }
   	}
   })
