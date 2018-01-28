@@ -1,0 +1,55 @@
+body{
+	text-align: center;
+	padding: 50px;
+	font-family: sans-serif;
+}
+.deck,
+.card-wrapper{
+  height: 400px;
+  width: 250px;
+  border-radius: 3%;
+  margin: auto;
+  border: solid 2px black;
+}
+.inverse{
+  -webkit-transform: rotate(-180deg); /* Safari */
+  -moz-transform: rotate(-180deg); /* Firefox */
+  -ms-transform: rotate(-180deg); /* IE */
+  -o-transform: rotate(-180deg); /* Opera */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); /* Internet Explorer */
+}
+.icon{
+	width: 150px;
+	height: 150px;
+	margin: auto;
+}
+.pentacles{
+  background-image: url(./img/pentacle.png);
+}
+.swords{
+  background-image: url(./img/sword.png);
+}
+.cups{
+  background-image: url(./img/cup.png);
+}
+.wands{
+  background-image: url(./img/wand.png);
+}
+.back{
+  display: flex;
+  flex-wrap: wrap;
+  width: 220px;
+  height: 80px;
+  padding: 0;
+  margin: 60px auto;
+}
+.back-icon{
+  width: 25%;
+  height: 100%;
+}
+.back-icon,
+.icon{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
