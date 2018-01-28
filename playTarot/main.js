@@ -696,6 +696,7 @@ window.onload = function () {
 				this.suitObject.swords = false
 				this.suitObject.cups = false
 				this.suitObject.major = false
+				this.suitObject.inverse = false
       }
   	}
   })
