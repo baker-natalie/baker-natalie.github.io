@@ -3,13 +3,13 @@ body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Architects Daughter', cursive;
-	color: #ff7db3;
+	color: #da075e;
 }
 h1{
 	margin: 0;
 }
 button{
-	background-color: #ff7db3;
+	background-color: #da075e;
 	font-family: 'Architects Daughter', cursive;
 	margin-top: 40px;
 	padding: 5px;
@@ -27,7 +27,7 @@ button{
   width: 250px;
   border-radius: 3%;
   margin: auto;
-  border: solid 2px #ff7db3;
+  border: solid 2px #da075e;
 }
 .inverse{
   -webkit-transform: rotate(-180deg); /* Safari */
@@ -98,7 +98,7 @@ button{
 	margin: 3px auto;
 	padding: 5px;
 	color: #fff;
-	background-color: #ff7db3;
+	background-color: #da075e;
 	border-radius: 5px;
 }
 .major-icon{
