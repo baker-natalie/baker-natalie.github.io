@@ -2,7 +2,7 @@ body{
 	text-align: center;
 	margin: 0;
 	padding: 0;
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Architects Daughter', cursive;
 	color: #ff7db3;
 }
 h1{
@@ -10,8 +10,10 @@ h1{
 }
 button{
 	background-color: #ff7db3;
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Architects Daughter', cursive;
 	margin-top: 40px;
+	padding: 5px;
+	font-size: 1.1em;
   border: none;
   color: white;
   text-align: center;
@@ -90,10 +92,11 @@ button{
 	padding: 0;
 }
 .meaning-item{
+	font-size: 1.1em;
 	line-height: 1.2;
 	max-width: 80%;
-	margin: 2.5px auto;
-	padding: 0 5px;
+	margin: 3px auto;
+	padding: 5px;
 	color: #fff;
 	background-color: #ff7db3;
 	border-radius: 5px;
@@ -108,7 +111,7 @@ button{
 	display: none;
 }
 .reversed{
-	height: 5em;
+	height: 4em;
 }
 header {
   position: absolute;
