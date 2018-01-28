@@ -1,0 +1,128 @@
+body{
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	font-family: 'Gloria Hallelujah', cursive;
+	color: #ff7db3;
+}
+h1{
+	margin: 0;
+}
+button{
+	background-color: #ff7db3;
+	font-family: 'Gloria Hallelujah', cursive;
+	margin-top: 40px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+	border-radius: 5px;
+}
+.deck,
+.card-wrapper{
+  height: 400px;
+  width: 250px;
+  border-radius: 3%;
+  margin: auto;
+  border: solid 2px #ff7db3;
+}
+.inverse{
+  -webkit-transform: rotate(-180deg); /* Safari */
+  -moz-transform: rotate(-180deg); /* Firefox */
+  -ms-transform: rotate(-180deg); /* IE */
+  -o-transform: rotate(-180deg); /* Opera */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); /* Internet Explorer */
+}
+.icon{
+	width: 150px;
+	height: 150px;
+	margin: auto;
+}
+.pentacles{
+  background-image: url(./img/pentacle.jpg);
+}
+.swords{
+  background-image: url(./img/sword.jpg);
+}
+.cups{
+  background-image: url(./img/cup.jpg);
+}
+.wands{
+  background-image: url(./img/wand.jpg);
+}
+.major-txt{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	font-size: 5em;
+}
+.deck{
+	display: flex;
+	flex-wrap: wrap;
+}
+.back{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80px;
+  height: 320px;
+  padding: 0;
+  margin: 40px auto;
+}
+.back-icon{
+  width: 80px;
+  height: 80px;
+}
+.major-icon,
+.back-icon,
+.icon{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.meaning{
+	width: 90%
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+}
+.meaning-item{
+	line-height: 1.2;
+	max-width: 80%;
+	margin: 2.5px auto;
+	padding: 0 5px;
+	color: #fff;
+	background-color: #ff7db3;
+	border-radius: 5px;
+}
+.major-icon{
+	margin: 0;
+	padding: 0;
+	width: 50%;
+	height: 75px;
+}
+.numeral{
+	display: none;
+}
+.reversed{
+	height: 5em;
+}
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+}
+main {
+  margin-top: 10vh;
+  min-height: 85vh;
+}
+footer {
+  height: 5vh;
+}
+footer p{
+	margin: 0;
+}
