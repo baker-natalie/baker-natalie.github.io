@@ -1,0 +1,51 @@
+<doctype !HTML>
+<head>
+  <title>playTarot</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  <header>
+  	<h1>playTarot</h1>
+  </header>
+  <hr>
+  <main id="app">
+    <div class="deck" v-if="deckVisible">
+      <div class="back">
+        <div class="back-icon pentacles"></div>
+        <div class="back-icon swords"></div>
+        <div class="back-icon cups"></div>
+        <div class="back-icon wands"></div>
+      </div>
+      <hr>
+      <div class="back inverse">
+        <div class="back-icon pentacles"></div>
+        <div class="back-icon swords"></div>
+        <div class="back-icon cups"></div>
+        <div class="back-icon wands"></div>
+      </div>
+    </div>
+    <div class="card-wrapper" v-if="cardVisible">
+      <div class="numeral">{{ cardNumeral }}</div>
+      <h3>{{ cardTitle }}</h3>
+      <div class="icon" v-bind:class="suitObject"></div>
+      <h6>{{ inverse }}
+      <ul id="meaning">
+        <li v-for="cardMeaning in cardMeanings">
+          {{ cardMeaning }}
+        </li>
+      </ul>
+    </div>
+
+    <button v-on:click="drawCard" v-if="deckVisible">Draw a Card!</button>
+    <button v-on:click="drawAgain" v-if="cardVisible">Reset</button>
+  </main>
+  <hr>
+  <footer>
+    <p>&copy; 2018 Natalie Baker</p>
+  </footer>
+</body>
+</html>
