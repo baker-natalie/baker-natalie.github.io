@@ -12,15 +12,31 @@ var data = [
     "id": "work",
     "header": "Stuff I've Made:",
     "projects": [
-      /*{
-        "id": "woman",
-        "title": "This Woman Codes",
-        "img": "woman.png",
+      {
+        "id": "pinktarot",
+        "title": "pinkTarot",
+        "img": "pT.jpg",
         "thumbnail": "",
-        "desc": "***IN DEVELOPMENT***",
+        "desc": "A simple tarot card app: Draw a card, receive insight! Build with VueJS",
+        "repoUrl": "https://github.com/baker-natalie/pinkTarot",
+        "demoUrl": "http://nataliebaker.me/pinkTarot"
+      }, {
+        "id": "conexus",
+        "title": "Conexus: Knack UI Customization",
+        "img": "knack.jpg",
+        "thumbnail": "",
+        "desc": "Write custom CSS to configure the appearance of a Knack Online Database Application. This project uses SASS to create base stylesheets to override the application's CSS and offer custom styling for multi-tenant use.",
         "repoUrl": "",
-        "demoUrl": "http://nataliebaker.me/thiswomancodes"
-      }, */{
+        "demoUrl": ""
+      }, {
+        "id": "skinner",
+        "title": "Express Skinner",
+        "img": "tigers.jpg",
+        "thumbnail": "",
+        "desc": "A NodeJS routing application that allows users to select a custom skin based on the url they browse to.",
+        "repoUrl": "https://github.com/baker-natalie/express-skinner",
+        "demoUrl": ""
+      }, {
         "id": "duplicate",
         "title": "DevExpress Duplicate Row",
         "img": "duplicate.png",
