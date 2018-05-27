@@ -1,0 +1,175 @@
+/****PAGE STYLES****/
+
+body{
+	background-color: #262C3D;
+	color: #efefef;
+	font-family: 'Bellefair', serif;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+section#work{
+	width: 1200px;
+	max-width: 100%;
+	margin-left: calc(50% - 600px);
+}
+h1, h3{
+	padding: 0;
+	margin: 0;
+}
+section h2,
+div#contact h2{
+	margin: 40px 0 10px 0;
+	height: 50px;
+	font-size: 35px;
+	line-height: 50px;
+}
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+nav ul li,
+footer ul li{
+	float: left;
+}
+p{
+	font-size: 20px;
+}
+a{
+	text-decoration: none;
+}
+
+/****HEADER STYLES****/
+
+header{
+	height: 600px;
+	background-image: url(../img/header-bg.jpg);
+	background-size: cover;
+	background-position: right;
+}
+div.navigation{
+	background-color: #262C3D;
+	height: 50px;
+	color: #e9b979;
+	line-height: 50px;
+}
+div.navigation h1{
+	font-size: 36px;
+}
+div.navigation nav{
+	font-family: 'Erica One', cursive;
+	font-size: 22px;
+}
+div.navigation nav a{
+	color: #efefef;
+}
+#home{
+	height: 550px;
+	font-family: 'Erica One', cursive;
+	font-size: 40px;
+	line-height: 90px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#262c3d+0,262c3d+100&1+30,0.9+53,0.65+74,0.5+84,0+100 */
+	background: -moz-linear-gradient(left, rgba(38,44,61,1) 0%, rgba(38,44,61,1) 30%, rgba(38,44,61,0.9) 53%, rgba(38,44,61,0.65) 74%, rgba(38,44,61,0.5) 84%, rgba(38,44,61,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(38,44,61,1) 0%,rgba(38,44,61,1) 30%,rgba(38,44,61,0.9) 53%,rgba(38,44,61,0.65) 74%,rgba(38,44,61,0.5) 84%,rgba(38,44,61,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(38,44,61,1) 0%,rgba(38,44,61,1) 30%,rgba(38,44,61,0.9) 53%,rgba(38,44,61,0.65) 74%,rgba(38,44,61,0.5) 84%,rgba(38,44,61,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262c3d', endColorstr='#00262c3d',GradientType=1 ); /* IE6-9 */
+}
+#home h1{
+	padding: 125px 15px 0 0;
+}
+#home h1 span{
+	color: #e9b979;
+}
+
+/****WORK STYLES****/
+
+#work{
+	height: 1350px;
+}
+#work div.project{
+	height: 400px;
+}
+#work div.codepen iframe,
+#work div.description p,
+#work div.description h3{
+	width: 550px !important;
+	margin-left: 25px;
+}
+#work div.project h3{
+	font-size: 45px;
+	color: #e9b979;
+}
+#work div.project p span{
+	padding: 0 20px 0 20px;
+}
+
+/****ABOUT STYLES****/
+
+#about{
+	width: 100%;
+	margin: 0;
+	height: 500px;
+	color: #262C3D;
+	background-image: url(../img/about-bg.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+#about img{
+	height: 350px;
+	width: 350px;
+	padding-left: 15px;
+}
+#about p{
+	margin-left: calc(100% - 365px);
+	width: 350px;
+	text-align: justify;
+}
+
+/****CONTACT STYLES****/
+
+#contact ul{
+	margin-left: 33.33%;
+	height: 100px;
+}
+#contact ul a{
+	font-size: 46px;
+	line-height: 100px;
+	color: #e9b979;
+}
+footer p{
+	margin-top: 50px;
+}
+footer p a{
+	color: #efefef;
+}
+/****GRID STYLES****/
+
+.center{
+	text-align: center;
+}
+.right{
+	text-align: right;
+}
+.quarter{
+	width: 25%;
+}
+.third{
+	width: 33.33%;
+}
+.half{
+	width: 50%;
+}
+.two-thirds{
+	width: 66.66%;
+}
+.three-quarters{
+	width: 75%;
+}
+.full{
+	width: 100%;
+}
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+}
