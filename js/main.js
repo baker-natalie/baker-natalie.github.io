@@ -48,7 +48,7 @@ data.display = function() {
     $("#contact").append("<div class='col-xs-1 col-md-2'></div><div class='social col-xs-10 col-md-8 offset-md-3'></div><div class='col-xs-1 col-md-2'></div>")
     $(".social").append("<h3 class='col-xs-12 text-center'>Let's Connect!</h3>")
     for (var i = 0; i < this[3].social.length; i++) {
-      var social = "<a class='col-xs-3 text-center' target='_blank' href='" + this[3].social[i].url + "' id='" + this[3].social[i].id + "'><i class='icons fa " + this[3].social[i].icon + "' aria-hidden='true'></i></a>"
+      var social = "<a class='col-xs-4 text-center' target='_blank' href='" + this[3].social[i].url + "' id='" + this[3].social[i].id + "'><i class='icons fa " + this[3].social[i].icon + "' aria-hidden='true'></i></a>"
       $(".social").append(social)
     }
   }
