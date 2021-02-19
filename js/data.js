@@ -7,7 +7,7 @@ var data = [
     "id": "about",
     "header": "Hi, I'm Natalie.",
     "img": "me.jpg",
-    "bio": "I'm a self-taught software developer using  JavaScript and C# to build web-based applications, and HTML and CSS to deliver intuitive and engaging user experiences. Data and coffee are my favorite things."
+    "bio": "I'm a self-taught software developer using  JavaScript to build web-based applications, and HTML and CSS to deliver intuitive and engaging user experiences. Data and coffee are my favorite things."
   }, {
     "id": "work",
     "header": "Stuff I've Made:",
@@ -19,7 +19,7 @@ var data = [
         "thumbnail": "",
         "desc": "A simple tarot card app: Draw a card, receive insight! Build with VueJS",
         "repoUrl": "https://github.com/baker-natalie/pinkTarot",
-        "demoUrl": "http://nataliebaker.me/pinkTarot"
+        "demoUrl": "http://baker-natalie.github.io/pinkTarot"
       }, {
         "id": "conexus",
         "title": "Conexus: Knack UI Customization",
@@ -67,7 +67,7 @@ var data = [
         "thumbnail": "",
         "desc": "Design and develop logo, color scheme, and website.",
         "repoUrl": "https://github.com/baker-natalie/baker-natalie.github.io/tree/master/bhika",
-        "demoUrl": "http://nataliebaker.me/bhika/"
+        "demoUrl": "http://baker-natalie.github.io/bhika/"
       }, {
         "id": "lugus",
         "title": "Lugus Aero",
@@ -75,7 +75,7 @@ var data = [
         "thumbnail": "",
         "desc": "Design and develop logo, color scheme, and website",
         "repoUrl": "",
-        "demoUrl": "https://lugusaero.com"
+        "demoUrl": ""
       }, {
         "id": "blackhall",
         "title": "Black Hall Aerospace",
@@ -91,7 +91,7 @@ var data = [
         "thumbnail": "",
         "desc": "Build an interactive map that displays information about an array of locations using the GoogleMaps API",
         "repoUrl": "https://github.com/baker-natalie/baker-natalie.github.io/tree/master/houmuse",
-        "demoUrl": "https://nataliebaker.me/houmuse"
+        "demoUrl": "https://baker-natalie.github.io/houmuse"
       }
     ]
   }, {
@@ -103,10 +103,6 @@ var data = [
         "url": "https://linkedin.com/in/natalie-baker",
         "icon": "fa-linkedin"
       }, {
-        "id": "twitter",
-        "url": "https://twitter.com/ohcodinglady",
-        "icon": "fa-twitter"
-      }, {
         "id": "github",
         "url": "https://github.com/baker-natalie",
         "icon": "fa-github"
@@ -116,6 +112,6 @@ var data = [
         "icon": "fa-codepen"
       }
     ],
-    "email": "hi@nataliebaker.net"
+    "email": "ohcodinglady@gmail.com"
   }
 ]
