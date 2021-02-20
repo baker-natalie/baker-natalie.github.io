@@ -59,5 +59,5 @@ data.display = function() {
 }
 data.display();
 $(".carousel").carousel({
-  interval: 3000
+  interval: 6000
 })
